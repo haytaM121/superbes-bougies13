@@ -1,0 +1,39 @@
+<p>Relaxation assurée</p>
+            <p class="price">1700 DA</p>
+            <div class="form-container">
+                <input type="text" placeholder="Votre nom" id="name2" required>
+                <input type="text" placeholder="Votre numéro" id="phone2" required>
+                <input type="text" placeholder="Votre wilaya" id="wilaya2" required>
+                <button onclick="showThankYouMessage('Bougie Lavande'); sendEmail('Bougie Lavande', document.getElementById('name2').value, document.getElementById('phone2').value, document.getElementById('wilaya2').value)">Commander</button>
+            </div>
+        </div>
+
+        <!-- Bougie Décorative -->
+        <div class="product">
+            <img src="bougie3.jpg" alt="Bougie Décorative">
+            <h3>Bougie Décorative</h3>
+            <p>Pour embellir votre intérieur</p>
+            <p class="price">2000 DA</p>
+            <div class="form-container">
+                <input type="text" placeholder="Votre nom" id="name3" required>
+                <input type="text" placeholder="Votre numéro" id="phone3" required>
+                <input type="text" placeholder="Votre wilaya" id="wilaya3" required>
+                <button onclick="showThankYouMessage('Bougie Décorative'); sendEmail('Bougie Décorative', document.getElementById('name3').value, document.getElementById('phone3').value, document.getElementById('wilaya3').value)">Commander</button>
+            </div>
+        </div>
+    </div>
+    <div class="thank-you">
+        <!-- رسالة الشكر ستظهر هنا بعد النقر على "Commander" -->
+    </div>
+    <footer>
+        <p>&copy; 2025 Superbes Bougies - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        function sendEmail(product, name, phone, wilaya) {
+            var mailtoLink = 'mailto:youremail@example.com?subject=Commande de ' + product + '&body=Nom: ' + name + '%0A' + 'Numéro: ' + phone + '%0A' + 'Wilaya: ' + wilaya;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
